@@ -1,0 +1,149 @@
+@import url(reset.css);
+@import "https://use.fontawesome.com/releases/v5.7.2/css/all.css";
+@media screen and (max-width: 724px) {
+  body {
+    font-size: 12px; } }
+@media screen and (min-width: 724px) and (max-width: 1024px) {
+  body {
+    font-size: 16px; } }
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 20px; } }
+
+header {
+  border: 1px solid;
+  min-width: 300px;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  position: fixed;
+  z-index: 1000;
+  /* background */
+  background: #d2ff52;
+  background: -moz-linear-gradient(top, #d2ff52 0%, #91e842 28%, #91e842 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #d2ff52), color-stop(28%, #91e842), color-stop(100%, #91e842));
+  background: -webkit-linear-gradient(top, #d2ff52 0%, #91e842 28%, #91e842 100%);
+  background: -o-linear-gradient(top, #d2ff52 0%, #91e842 28%, #91e842 100%);
+  background: -ms-linear-gradient(top, #d2ff52 0%, #91e842 28%, #91e842 100%);
+  background: linear-gradient(to bottom, #d2ff52 0%, #91e842 28%, #91e842 100%);
+  /* background                     END***********************/ }
+  header nav {
+    width: 60%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch; }
+    @media screen and (min-width: 350px) {
+      header nav {
+        flex-direction: row; } }
+    header nav a {
+      height: 3rem;
+      border: 1px solid transparent;
+      flex-grow: 2;
+      display: grid;
+      place-content: center;
+      text-decoration: none;
+      font-weight: bolder;
+      color: lightcyan;
+      transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
+      header nav a:hover {
+        color: #b83131; }
+
+.container {
+  position: relative; }
+
+main {
+  width: 100%;
+  position: absolute;
+  top: 9.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; }
+  @media screen and (min-width: 350px) {
+    main {
+      top: 3rem; } }
+  main #welcome-section {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background-image: url("../welcome.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%; }
+    main #welcome-section:hover h1 {
+      color: #ffae00; }
+    main #welcome-section > h1 {
+      font-family: 'Trebuchet MS', sans-serif;
+      font-weight: bold;
+      font-size: 4em;
+      text-align: center;
+      color: #ddb6b6;
+      transition: color 0.5s ease-in; }
+    main #welcome-section > p {
+      text-align: center;
+      font-size: 2em; }
+      main #welcome-section > p > a {
+        text-decoration: none;
+        color: #1eff00;
+        font-weight: bolder; }
+  main #projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(1fr));
+    grid-gap: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 800px; }
+    main #projects .project-tile {
+      height: 12rem;
+      display: flex;
+      flex-direction: column; }
+      main #projects .project-tile .preview {
+        height: 100%; }
+        main #projects .project-tile .preview:hover span {
+          transform: scaleY(1); }
+        main #projects .project-tile .preview > a {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          position: relative; }
+        main #projects .project-tile .preview img {
+          height: 100%;
+          width: 100%;
+          box-shadow: 0px 0px 2px 3px; }
+        main #projects .project-tile .preview span {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          display: grid;
+          place-content: center;
+          height: 2rem;
+          border: 1px solid;
+          background-color: #ebed64;
+          transform: scaleY(0);
+          transform-origin: bottom;
+          transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
+      main #projects .project-tile .caption {
+        border: 1px solid; }
+  main #contact {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(30deg, green, yellow); }
+    main #contact > div {
+      display: flex;
+      justify-content: space-around;
+      width: 90%;
+      max-width: 600px; }
+      main #contact > div .link {
+        color: lavender;
+        transition: color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
+        main #contact > div .link:hover {
+          color: #4d3f2d; }
+
+/*# sourceMappingURL=main.css.map */
